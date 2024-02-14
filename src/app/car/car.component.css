@@ -1,0 +1,14 @@
+#addCarForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-field {
+    width: 100%;
+    margin-right: 20px; /* Add space to the right of each form field */
+}
+
+.add-car-button {
+    margin-left: 20px; /* Add space to the left of the button */
+}
