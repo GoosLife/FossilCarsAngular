@@ -1,0 +1,35 @@
+#addCarForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.form-field {
+    width: 100%;
+}
+
+.add-car-button {
+    margin-left: 10px; /* Add space to the left of the button */
+    margin-right:10px;
+}
+
+.heading-add-new-car {
+    padding-bottom:-4rem;
+}
+
+.cancel-button {
+    width:fit-content;
+    align-self:center;
+    float:right;
+}
+
+.header-container {
+    display: flex;
+    justify-content:space-between;
+}
+
+.content-div {
+    padding: 2rem;
+}

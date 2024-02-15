@@ -1,0 +1,28 @@
+<div class="content-div">
+    <div class="header-container">
+        <h4 class="heading-add-new-car">Edit car</h4>
+        <button mat-button class="cancel-button" (click)="onNoClick()">
+            <mat-icon class="small-icon" color="warn">close</mat-icon>
+        </button>
+    </div>
+    <div class="add-car-container">
+        <form [formGroup]="newCar" id="addCarForm">
+            <mat-form-field class="form-field">
+                <mat-label>Model</mat-label>
+                <input type="text" matInput formControlName="model" placeholder="Ex. Audi A8">
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label for="quantity">Antal</mat-label>
+                <input type="number" matInput formControlName="quantity" placeholder="Ex. 1044">
+            </mat-form-field>
+
+            <mat-form-field class="form-field">
+                <mat-label for="changeQuantityPercent">Ændring (%)</mat-label>
+                <input type="number" formControlName="changeQuantityPercent" matInput pattern="[0-9]*">
+            </mat-form-field>
+
+            <button mat-button class="add-car-button" color="primary" (click)="editCar()">Confirm</button>
+        </form>
+    </div>
+</div>

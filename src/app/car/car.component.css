@@ -1,14 +1,14 @@
+.add-car-container {
+    padding:2rem;
+}
+
 #addCarForm {
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content:space-between;
+    gap:2rem;
 }
 
-.form-field {
-    width: 100%;
-    margin-right: 20px; /* Add space to the right of each form field */
-}
-
-.add-car-button {
-    margin-left: 20px; /* Add space to the left of the button */
+#addCarForm mat-form-field {
+    width:100%;
 }
