@@ -1,13 +1,17 @@
-    <form [formGroup]="loginData" id="loginForm">
-        <mat-form-field class="form-field">
-            <mat-label>Username</mat-label>
-            <input type="text" matInput formControlName="username">
-        </mat-form-field>
+<form [formGroup]="loginData" id="loginForm">
+    <mat-form-field class="form-field">
+        <mat-label>Username</mat-label>
+        <input type="text" matInput formControlName="username">
+        <mat-icon matSuffix></mat-icon> <!-- Blank suffix to align -->
+    </mat-form-field>
 
-        <mat-form-field class="form-field">
-            <mat-label>Password</mat-label>
-            <input type="password" matInput formControlName="password">
-        </mat-form-field>
+    <mat-form-field class="form-field">
+        <mat-label>Password</mat-label>
+        <input matInput placeholder="Password" [type]="hide ? 'password' : 'text'" formControlName="password" required>
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+    </mat-form-field>
 
-        <button mat-button class="login-button" (click)="login()" type="submit">Log ind</button>
-    </form>s
+    <mat-error>{{getErrors()}}</mat-error>
+
+    <button mat-button class="login-button" (click)="login()" type="submit">Log ind</button>
+</form>
